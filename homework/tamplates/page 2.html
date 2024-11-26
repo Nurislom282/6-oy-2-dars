@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .glow-button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            background: #ff4d4d;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            animation: glow 1.5s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px #ff4d4d, 0 0 10px #ff4d4d, 0 0 15px #ff4d4d;
+            }
+            to {
+                box-shadow: 0 0 10px #ff4d4d, 0 0 20px #ff4d4d, 0 0 30px #ff4d4d;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="glow-button">MENI EZ</button>
+</body>
+</html>

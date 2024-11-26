@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dine - Hero and Footer</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #111;
+        color: #fff;
+      }
+
+      /* Hero Section Styling */
+      .hero {
+        position: relative;
+        height: 100vh;
+        background: url("./img/Bitmap.svg") no-repeat center center/cover;
+        display: flex;
+        align-items: center;
+        color: #fff;
+        padding-left: 50px;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        z-index: 0;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 1;
+        max-width: 600px;
+      }
+
+      .hero .logo {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #fff;
+        transform: translateY(-140px);
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #ddd;
+        margin-bottom: 30px;
+      }
+
+      .hero button {
+        background-color: transparent;
+        color: #fff;
+        padding: 0.75rem 1.5rem;
+        border: 2px solid #fff;
+        font-size: 1rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .hero button:hover {
+        background-color: #fff;
+        color: #111;
+      }
+
+      /* Footer Section Styling */
+      .footer {
+        background: url("./img/b.svg") no-repeat center center/cover;
+        background-color: #111; /* Fallback color */
+        color: #fff;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .footer::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+        z-index: 0;
+      }
+
+      .footer-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-left,
+      .footer-right {
+        margin: 20px;
+      }
+
+      .footer .logo {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .footer p,
+      .footer h3 {
+        color: #ccc;
+        margin-bottom: 5px;
+      }
+
+      .footer h3 {
+        font-size: 1rem;
+        font-weight: bold;
+      }
+
+      .footer button {
+        background-color: transparent;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border: 2px solid #fff;
+        cursor: pointer;
+        transition: background 0.3s, color 0.3s;
+      }
+
+      .footer button:hover {
+        background-color: #fff;
+        color: #111;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero,
+        .footer {
+          padding: 20px;
+          text-align: center;
+        }
+
+        .footer-content {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer-left,
+        .footer-right {
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="logo">dine</div>
+        <h1>Exquisite dining since 1989</h1>
+        <p>
+          Experience our seasonal menu in beautiful country surroundings. Eat
+          the freshest produce from the comfort of our farmhouse.
+        </p>
+        <button data-href-template="page 2.html">Book a Table</button>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="footer-content">
+        <!-- Left Side of Footer -->
+        <div class="footer-left">
+          <div class="logo">dine</div>
+          <p>Location</p>
+          <p>Marthwaite, Sedbergh</p>
+          <p>Cumbria</p>
+          <p>+00 44 123 4567</p>
+        </div>
+
+        <!-- Right Side of Footer -->
+        <div class="footer-right">
+          <h3>Open Times</h3>
+          <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+          <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+          <button>Book a Table</button>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

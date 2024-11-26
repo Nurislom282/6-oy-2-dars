@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .border-animation {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            background: white;
+        }
+
+        .border-animation::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+            z-index: -1;
+            animation: animate 20s linear infinite;
+        }
+
+        @keyframes animate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="border-animation"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            perspective: 1000px;
+            padding: 50px;
+        }
+
+        .parallax-card {
+            width: 300px;
+            height: 400px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+
+        .container:hover .parallax-card {
+            transform: rotateY(30deg) rotateX(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="parallax-card"></div>
+    </div>
+</body>
+</html>
